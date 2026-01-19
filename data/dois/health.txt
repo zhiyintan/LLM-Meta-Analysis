@@ -1,0 +1,13 @@
+# Medical and Health Science Domain
+# Papers from meta-analysis: "Association of anthropometric parameters with myopia"
+# 9 empirical studies
+
+10.1186/1471-2458-13-975
+10.1186/s12886-020-1316-6
+10.1016/j.jfo.2020.01.003
+10.1371/journal.pone.0265317
+10.1002/oby.23482
+10.3390/children11081008
+10.1038/s41598-024-62152-2
+10.2147/JMDH.S458978
+10.1167/iovs.66.4.8

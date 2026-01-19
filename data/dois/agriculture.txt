@@ -1,0 +1,16 @@
+# Agricultural Science Domain  
+# Papers from Agricultural Water Management (2005-2025)
+# Query: "(drought stress OR water stress) AND plant"
+# 11 empirical studies
+
+10.1016/j.rse.2004.12.007
+10.1016/j.agwat.2010.08.008
+10.1007/s11119-013-9334-5
+10.1016/j.compag.2016.07.028
+10.1016/j.agwat.2016.08.031
+10.3390/rs9080828
+10.3389/fpls.2020.00595
+10.1016/j.agwat.2020.106584
+10.1016/j.agwat.2021.106866
+10.1016/j.agwat.2023.108442
+10.1016/j.agwat.2024.109174

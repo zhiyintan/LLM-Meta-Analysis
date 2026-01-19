@@ -1,0 +1,139 @@
+{
+  "output_format": "json",
+  "questions": [
+    {
+      "id": "T1.1",
+      "tier": 1,
+      "category": "extraction",
+      "question": "List all the study populations (unit of analysis) for these papers. Output as JSON: {\"study_population\": [\"<study_population>\", ...]}"
+    },
+    {
+      "id": "T1.2",
+      "tier": 1,
+      "category": "extraction",
+      "question": "List all the countries where these studies was conducted. Convert cities/regions to country names (e.g., 'London'->'United Kingdom'). Output as JSON: {\"country\": [\"<country>\",...]}"
+    },
+    {
+      "id": "T1.3",
+      "tier": 1,
+      "category": "extraction",
+      "question": "List all independent variables (predictors/causes) investigated. Output as JSON: {\"independent_variables\": [\"<independent_variable1>\", \"<independent_variable2>\", ...]}"
+    },
+    {
+      "id": "T1.4",
+      "tier": 1,
+      "category": "extraction",
+      "question": "List all dependent variables (outcomes/effects) investigated. Output as JSON: {\"dependent_variables\": [\"<dependent_variables1>\", \"<dependent_variables2>\", ...]}"
+    },
+    {
+      "id": "T1.5",
+      "tier": 1,
+      "category": "extraction",
+      "question": "List the sample sizes for all studies. Output as JSON: {\"sample_size\": [\"<sample_size>\" or null,...]}"
+    },
+    {
+      "id": "T1.6",
+      "tier": 1,
+      "category": "extraction",
+      "question": "List all the statistical methods used to quantify the association between two variables. Output as JSON: {\"statistical_method\": [\"<statistical_method>\",...]}"
+    },
+    {
+      "id": "T2.1",
+      "tier": 2,
+      "category": "extraction",
+      "question": "List all the study population and the corresponding sample sizes. Output as JSON: {\"study_population__sample\": [{\"study_population\": \"<study_population>\", \"sample_size\": \"<sample_size>\"}, ...]}"
+    },
+    {
+      "id": "T2.2",
+      "tier": 2,
+      "category": "extraction",
+      "question": "List all the study populations and the corresponding countries where these studies were conducted. Output as JSON: {\"study_population__country\": [{\"study_population\": \"<study_population>\", \"country\": \"<country>\"}, ...]}"
+    },
+    {
+      "id": "T2.3",
+      "tier": 2,
+      "category": "extraction",
+      "question": "List all the independent variables with its measurement units. Output as JSON: {\"independent_variable__unit\": [{\"independent_variable\": \"<independent_variable>\", \"independent_variable_unit\": \"<independent_variable_unit>\"}, ...]}"
+    },
+    {
+      "id": "T2.4",
+      "tier": 2,
+      "category": "extraction",
+      "question": "List all the dependent variables with its measurement units. Output as JSON: {\"dependent_variable__unit\": [{\"dependent_variable\": \"<dependent_variable>\", \"dependent_variable_unit\": \"<dependent_variable_unit>\"}, ...]}"
+    },
+    {
+      "id": "T2.5",
+      "tier": 2,
+      "category": "extraction",
+      "question": "List all pairs of independent and dependent variables. Output as JSON: {\"independent_variable__dependent_variable\": [{\"independent_variable\": \"<independent_variable>\", \"dependent_variable\": \"<dependent_variable>\"}, ...]}"
+    },
+    {
+      "id": "T3.1",
+      "tier": 3,
+      "category": "extraction",
+      "question": "List all study populations and their sample sizes, along with the corresponding countries where these studies were conducted. Output as JSON: {\"study_population__sample__country\": [{\"study_population\": \"<study_population>\", \"sample_size\": \"<sample_size>\", \"country\": \"<country>\"}, ...]}"
+    },
+    {
+      "id": "T3.2",
+      "tier": 3,
+      "category": "extraction",
+      "question": "List all study populations and their sample sizes, along with the independent variables. Output as JSON: {\"study_population__sample__independent_variable\": [{\"study_population\": \"<study_population>\", \"sample_size\": \"<sample_size>\", \"independent_variable\": \"<independent_variable>\"}, ...]}"
+    },
+    {
+      "id": "T3.3",
+      "tier": 3,
+      "category": "extraction",
+      "question": "List all study populations and their sample sizes, along with the statistical methods used to quantify the association between two variables. Output as JSON: {\"study_population__sample__statistical_method\": [{\"study_population\": \"<study_population>\", \"sample_size\": \"<sample_size>\", \"statistical_method\": \"<statistical_method>\"}, ...]}"
+    },
+    {
+      "id": "T4.1",
+      "tier": 4,
+      "category": "extraction",
+      "question": "List all study populations, independent and dependent variables, and the reported effect sizes. Output as JSON: {\"study_population__independent_variable__dependent_variable__effect_size\": [{\"study_population\": \"<study_population>\", \"independent_variable\": \"<independent_variable>\", \"dependent_variable\": \"<dependent_variable>\", \"effect_size\": \"<effect_size>\"}, ...]}"
+    },
+    {
+      "id": "T5.1",
+      "tier": 5,
+      "category": "extraction",
+      "question": "List all study populations, independent and dependent variables, along with the statistical methods and effect sizes. Output as JSON: {\"study_population__independent_variable__dependent_variable__statistical_method__effect_size\": [{\"study_population\": \"<study_population>\", \"independent_variable\": \"<independent_variable>\", \"dependent_variable\": \"<dependent_variable>\", \"statistical_method\": \"<statistical_method>\", \"effect_size\": \"<effect_size>\"}, ...]}"
+    },
+    {
+      "id": "S1",
+      "tier": 6,
+      "category": "counting",
+      "question": "List the paper counts for each distinct study population. Output as JSON: {\"study_population_counts\": [{\"study_population\": \"<study_population>\", \"paper_count\": <n>}, ...]}"
+    },
+    {
+      "id": "S2",
+      "tier": 6,
+      "category": "counting",
+      "question": "List the paper counts for each distinct country. Output as JSON: {\"country_counts\": [{\"country\": \"<country>\", \"paper_count\": <n>}, ...]}"
+    },
+    {
+      "id": "S4",
+      "tier": 6,
+      "category": "calculation",
+      "question": "Calculate the average sample size across all studies. Output as JSON: {\"average_sample_size\": <value>}"
+    },
+    {
+      "id": "S3",
+      "tier": 6,
+      "category": "counting",
+      "question": "List the paper counts for each (study population, country) pair. Output as JSON: {\"study_population__country_counts\": [{\"study_population\": \"<study_population>\", \"country\": \"<country>\", \"paper_count\": <n>}, ...]}"
+    },
+    {
+      "id": "S5",
+      "tier": 6,
+      "category": "counting",
+      "question": "List the paper counts for each (study population, country) pair for studies with a sample size greater than 100. Output as JSON: {\"study_population__country_counts_gt100\": [{\"study_population\": \"<study_population>\", \"country\": \"<country>\", \"paper_count\": <n>}, ...]}"
+    }
+  ],
+  "tiers": {
+    "1": "Single variable extraction: f(X), Count(X) where X ∈ {P, G, IV, DV, N, M}",
+    "2": "Two variable extraction: f(X,Y), Count(X,Y)",
+    "3": "Three variable extraction: f(X,Y,Z), Count(X,Y,Z)",
+    "4": "Four variable extraction: f(W,X,Y,Z)",
+    "5": "Five variable extraction: f(V,W,X,Y,Z)",
+    "6": "Counting and calculation across papers"
+  }
+}
